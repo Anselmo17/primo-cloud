@@ -86,20 +86,6 @@ export function Navbar() {
                 </motion.div>
               ))}
             </motion.div>
-            <motion.div
-              className="flex items-center space-x-2"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-            >
-              <Link href="/documents/muhammad-murad-resume.pdf" target="_blank" download>
-                <Button variant="outline" size="sm" className="relative overflow-hidden group">
-                  <span className="relative z-10">Download Resume</span>
-                  <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                </Button>
-              </Link>
-              <ThemeToggle />
-            </motion.div>
           </div>
 
           {/* Mobile Navigation Button */}
