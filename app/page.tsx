@@ -771,8 +771,8 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <h2 className="text-xl font-bold">Muhammad Murad</h2>
-              <p className="text-gray-400">AI Engineer</p>
+              <h2 className="text-xl font-bold">Primo Cloud</h2>
+              <p className="text-gray-400">Security</p>
             </div>
             <div className="flex space-x-4">
               <Link
@@ -805,7 +805,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-6 text-center text-gray-400 text-sm">
-            <p>© {new Date().getFullYear()} Muhammad Murad. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Primo Cloud. All rights reserved.</p>
           </div>
         </div>
       </footer>
