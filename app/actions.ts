@@ -35,8 +35,8 @@ export async function sendContactEmail(formData: FormData) {
 
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: "pitafimurad99@gmail.com", // Your email address
+      from: email, //process.env.EMAIL_USER,
+      to: "ansinftec17@gmail.com", // Your email address
       subject: `Portfolio Contact: ${subject}`,
       text: `
         Name: ${name}

@@ -1,10 +1,17 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Github, Linkedin, Mail, ExternalLink, Download, ArrowDown } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { AnimatedText, ClientMotion } from "@/components/client-animations"
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Download,
+  ArrowDown,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { AnimatedText, ClientMotion } from "@/components/client-animations";
 
 export function HeroSection() {
   return (
@@ -13,7 +20,10 @@ export function HeroSection() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 space-y-6">
             <div>
-              <AnimatedText text="Primo Cloud" className="text-4xl md:text-5xl font-bold tracking-tight" />
+              <AnimatedText
+                text="Primo Cloud"
+                className="text-4xl md:text-5xl font-bold tracking-tight"
+              />
               <AnimatedText
                 text="Engenheiro de Soluções Cloud"
                 className="text-2xl md:text-3xl font-semibold mt-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
@@ -26,8 +36,9 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Specializing in machine learning, deep learning, and data science with expertise in deploying AI
-              solutions and integrating LLM APIs.
+              Especializado em aprendizado de máquina, aprendizado profundo e
+              ciência de dados, com experiência em implantação de soluções de IA
+              e integração de APIs de LLM.
             </ClientMotion>
             <ClientMotion
               className="flex flex-wrap gap-4"
@@ -37,20 +48,32 @@ export function HeroSection() {
             >
               <Button asChild className="relative overflow-hidden group">
                 <Link href="#contact">
-                  <span className="relative z-10">Get in Touch</span>
+                  <span className="relative z-10">Entre em contato</span>
                   <span className="absolute inset-0 bg-white dark:bg-gray-800 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                 </Link>
               </Button>
-              <Button variant="outline" asChild className="relative overflow-hidden group">
+              <Button
+                variant="outline"
+                asChild
+                className="relative overflow-hidden group"
+              >
                 <Link href="#projects">
-                  <span className="relative z-10">View Projects</span>
+                  <span className="relative z-10">Ver projetos</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                 </Link>
               </Button>
-              <Button variant="secondary" asChild className="relative overflow-hidden group">
-                <Link href="/documents/muhammad-murad-resume.pdf" target="_blank" download>
+              <Button
+                variant="secondary"
+                asChild
+                className="relative overflow-hidden group"
+              >
+                <Link
+                  href="/documents/muhammad-murad-resume.pdf"
+                  target="_blank"
+                  download
+                >
                   <Download className="w-4 h-4 mr-2" />
-                  <span className="relative z-10">Resume</span>
+                  <span className="relative z-10">Currículo</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                 </Link>
               </Button>
@@ -102,7 +125,13 @@ export function HeroSection() {
             }}
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-              <Image src="/images/primoCloud.jpeg" alt="Primo Cloud Security" fill className="object-cover" priority />
+              <Image
+                src="/images/primoCloud.jpeg"
+                alt="Primo Cloud Security"
+                fill
+                className="object-cover"
+                priority
+              />
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-blue-600/20 mix-blend-overlay" />
             </div>
           </ClientMotion>
@@ -112,7 +141,12 @@ export function HeroSection() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
+          transition={{
+            delay: 1.5,
+            duration: 1,
+            repeat: Number.POSITIVE_INFINITY,
+            repeatType: "reverse",
+          }}
         >
           <Link
             href="#about"
@@ -123,5 +157,5 @@ export function HeroSection() {
         </ClientMotion>
       </div>
     </section>
-  )
+  );
 }

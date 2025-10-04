@@ -4,7 +4,6 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
-import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function Navbar() {
@@ -101,7 +100,7 @@ export function Navbar() {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none"
               aria-expanded="false"
             >
-              <span className="sr-only">Open main menu</span>
+                <span className="sr-only">Abrir menu principal</span>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </motion.div>
@@ -135,17 +134,6 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
-                <Link
-                  href="/documents/muhammad-murad-resume.pdf"
-                  target="_blank"
-                  download
-                  className="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Download Resume
-                </Link>
-              </motion.div>
             </div>
           </motion.div>
         )}
