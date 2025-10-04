@@ -31,8 +31,8 @@ export function ContactForm() {
 
       if (result.success) {
         toast({
-          title: "Message sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
+          title: "Mensagem enviada!",
+          description: "Obrigado pela sua mensagem. Entrarei em contato em breve.",
           variant: "default",
         })
 
@@ -45,15 +45,15 @@ export function ContactForm() {
         })
       } else {
         toast({
-          title: "Error",
-          description: result.error || "Something went wrong. Please try again.",
+          title: "Erro",
+          description: result.error || "Algo deu errado. Por favor, tente novamente.",
           variant: "destructive",
         })
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
+        title: "Erro",
+        description: "Falha ao enviar a mensagem. Por favor, tente novamente mais tarde.",
         variant: "destructive",
       })
     } finally {
@@ -77,13 +77,13 @@ export function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium">
-            Name
+            Nome
           </label>
           <motion.input
             id="name"
             type="text"
             className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-            placeholder="Your Name"
+            placeholder="Seu Nome"
             value={formData.name}
             onChange={handleChange}
             required
@@ -92,14 +92,14 @@ export function ContactForm() {
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium">
-            Email
-          </label>
+            <label htmlFor="email" className="text-sm font-medium">
+            E-mail
+            </label>
           <motion.input
             id="email"
             type="email"
             className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-            placeholder="Your Email"
+            placeholder="Seu E-mail"
             value={formData.email}
             onChange={handleChange}
             required
@@ -110,13 +110,13 @@ export function ContactForm() {
       </div>
       <div className="space-y-2">
         <label htmlFor="subject" className="text-sm font-medium">
-          Subject
+          Assunto
         </label>
         <motion.input
           id="subject"
           type="text"
           className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-          placeholder="Subject"
+          placeholder="Assunto"
           value={formData.subject}
           onChange={handleChange}
           required
@@ -126,13 +126,13 @@ export function ContactForm() {
       </div>
       <div className="space-y-2">
         <label htmlFor="message" className="text-sm font-medium">
-          Message
+          Mensagem
         </label>
         <motion.textarea
           id="message"
           rows={5}
           className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-          placeholder="Your Message"
+          placeholder="Sua Mensagem"
           value={formData.message}
           onChange={handleChange}
           required
@@ -142,7 +142,7 @@ export function ContactForm() {
       </div>
       <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
         <Button type="submit" className="w-full relative overflow-hidden group" disabled={isSubmitting}>
-          <span className="relative z-10">{isSubmitting ? "Sending..." : "Send Message"}</span>
+          <span className="relative z-10">{isSubmitting ? "Enviando..." : "Enviar Mensagem"}</span>
           <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
         </Button>
       </motion.div>
