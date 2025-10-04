@@ -37,13 +37,13 @@ export function HeroSection() {
             >
               <Button asChild className="relative overflow-hidden group">
                 <Link href="#contact">
-                  <span className="relative z-10">Get in Touch</span>
+                  <span className="relative z-10">Entre em contato</span>
                   <span className="absolute inset-0 bg-white dark:bg-gray-800 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                 </Link>
               </Button>
               <Button variant="outline" asChild className="relative overflow-hidden group">
                 <Link href="#projects">
-                  <span className="relative z-10">View Projects</span>
+                  <span className="relative z-10">Ver projetos</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                 </Link>
               </Button>
