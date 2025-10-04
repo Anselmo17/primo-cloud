@@ -6,7 +6,7 @@
 - nextjs
 
 
-## Instalação requisitos
+## Instalação e requisitos
 - nodejs 18.20
 - npm 10.7
 
