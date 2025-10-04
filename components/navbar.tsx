@@ -135,17 +135,6 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
-                <Link
-                  href="/documents/muhammad-murad-resume.pdf"
-                  target="_blank"
-                  download
-                  className="block px-3 py-2 rounded-md text-base font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Download Resume
-                </Link>
-              </motion.div>
             </div>
           </motion.div>
         )}
