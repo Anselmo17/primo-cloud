@@ -1,21 +1,32 @@
-
 # Primo Cloud
-- Criado para ajudar o usuário nas suas necessidades com soluções na nuvem.
 
-## Tecnologias usadas
-- nextjs
+Primo Cloud é uma aplicação desenvolvida para atender às necessidades dos usuários com soluções eficientes e seguras na nuvem.
 
+## Tecnologias Utilizadas
 
-## Instalação e requisitos
-- nodejs 18.20
-- npm 10.7
+- **Next.js**: Framework React para construção de aplicações web modernas e otimizadas.
 
- Apos ter instalado pode rodar os comandos abaixo:
-  Para instalar as dependencias do projeto rodar o comando:
-  - npm install
+## Requisitos de Instalação
 
-  Para rodar o projeto local:
-  - npm run dev
+Antes de começar, certifique-se de ter os seguintes requisitos instalados em sua máquina:
+
+- **Node.js**: Versão 18.20 ou superior.
+- **npm**: Versão 10.7 ou superior.
+
+## Passos para Instalação
+
+Siga os passos abaixo para configurar e executar o projeto localmente:
+
+1. **Instalar Dependências**  
+   Execute o comando abaixo para instalar todas as dependências necessárias do projeto:  
+   ```bash
+   npm install
+   ```
+
+2. **Rodar o Projeto Local**  
+   Execute o comando abaixo para rodar o projeto localmente:  
+   ```bash
+   npm run dev
+   ```
 
 ![App Screenshot](./public/images/site.png)
-  
