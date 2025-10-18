@@ -30,3 +30,12 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
    ```
 
 ![App Screenshot](./public/images/site.png)
+
+
+## Tarefas
+- desacoplar os componentes nas seções [x]
+  - ainda esta pendente a seção de contatos []
+- ajustar textos []
+- 
+
+
