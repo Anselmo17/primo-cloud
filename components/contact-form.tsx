@@ -83,7 +83,7 @@ export function ContactForm() {
             id="name"
             type="text"
             className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-            placeholder="Seu Nome"
+            placeholder="seu Nome"
             value={formData.name}
             onChange={handleChange}
             required
@@ -99,7 +99,7 @@ export function ContactForm() {
             id="email"
             type="email"
             className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-            placeholder="Seu E-mail"
+            placeholder="seu e-mail"
             value={formData.email}
             onChange={handleChange}
             required
@@ -116,7 +116,7 @@ export function ContactForm() {
           id="subject"
           type="text"
           className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-          placeholder="Assunto"
+          placeholder="assunto"
           value={formData.subject}
           onChange={handleChange}
           required
@@ -132,7 +132,7 @@ export function ContactForm() {
           id="message"
           rows={5}
           className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 dark:bg-gray-800"
-          placeholder="Sua Mensagem"
+          placeholder="sua Mensagem"
           value={formData.message}
           onChange={handleChange}
           required
