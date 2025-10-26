@@ -25,16 +25,16 @@ export function ContactSection() {
                 <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
                   <Mail className="w-5 h-5 text-purple-600 mr-3" />
                   <a
-                    href="mailto:pitafimurad99@gmail.com"
+                    href="mailto:ansinftec17@gmail.com"
                     className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                   >
-                    pitafimurad99@gmail.com
+                    ansinftec17@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
                   <Linkedin className="w-5 h-5 text-purple-600 mr-3" />
                   <a
-                    href="https://linkedin.com/in/murad-pitafi"
+                    href="https://www.linkedin.com/in/anselmo-nascimento-80783a145/"
                     target="_blank"
                     className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                     rel="noreferrer"
@@ -45,23 +45,12 @@ export function ContactSection() {
                 <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
                   <Github className="w-5 h-5 text-purple-600 mr-3" />
                   <a
-                    href="https://github.com/murad-pitafi"
+                    href="https://github.com/Anselmo17"
                     target="_blank"
                     className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                     rel="noreferrer"
                   >
                     Perfil no GitHub
-                  </a>
-                </div>
-                <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
-                  <ExternalLink className="w-5 h-5 text-purple-600 mr-3" />
-                  <a
-                    href="https://kaggle.com/muradpitafi"
-                    target="_blank"
-                    className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                    rel="noreferrer"
-                  >
-                    Perfil no Kaggle
                   </a>
                 </div>
               </div>
