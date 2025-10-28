@@ -29,7 +29,7 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
    npm run dev
    ```
 
-![App Screenshot](./public/images/site.png)
+![App Screenshot](/public/images/site.png)
 
 
 ## Tarefas
