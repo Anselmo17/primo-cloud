@@ -1,42 +1,50 @@
-"use server"
+"use server";
 
-import { z } from "zod"
-import nodemailer from "nodemailer"
+import { z } from "zod";
+import nodemailer from "nodemailer";
 
 // Form validation schema
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-})
+  subject: z.string()
+    .min(5, { message: "Subject must be at least 5 characters." }),
+  message: z.string()
+    .min(10, { message: "Message must be at least 10 characters." }),
+});
 
-type FormData = z.infer<typeof formSchema>
+type FormData = z.infer<typeof formSchema>;
 
 export async function sendContactEmail(formData: FormData) {
   try {
     // Validate form data
-    const validatedFields = formSchema.safeParse(formData)
+    const validatedFields = formSchema.safeParse(formData);
 
     if (!validatedFields.success) {
-      return { success: false, error: "Invalid form data. Please check your inputs." }
+      return {
+        success: false,
+        error: "Invalid form data. Please check your inputs.",
+      };
     }
 
-    const { name, email, subject, message } = validatedFields.data
+    const { name, email, subject, message } = validatedFields.data;
 
-    // Create a transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-    })
-
+      tls: {
+        // Isso ignora a validação do certificado, corrigindo o erro
+        rejectUnauthorized: false,
+      },
+    });
+    
     // Email content
     const mailOptions = {
-      from: email, //process.env.EMAIL_USER,
-      to: "ansinftec17@gmail.com", // Your email address
+      from: email,
+      to: process.env.EMAIL_USER,
       subject: `Portfolio Contact: ${subject}`,
       text: `
         Name: ${name}
@@ -53,14 +61,17 @@ export async function sendContactEmail(formData: FormData) {
         <h3>Message:</h3>
         <p>${message}</p>
       `,
-    }
+    };
 
     // Send email
-    await transporter.sendMail(mailOptions)
+    await transporter.sendMail(mailOptions);
 
-    return { success: true }
+    return { success: true };
   } catch (error) {
-    console.error("Error sending email:", error)
-    return { success: false, error: "Failed to send email. Please try again later." }
+    console.error("Error sending email:", error);
+    return {
+      success: false,
+      error: "Failed to send email. Please try again later.",
+    };
   }
 }
