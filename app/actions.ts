@@ -55,10 +55,10 @@ export async function sendContactEmail(formData: FormData) {
       `,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Nome:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <h3>Message:</h3>
+        <p><strong>Assunto:</strong> ${subject}</p>
+        <h3>Mensagem:</h3>
         <p>${message}</p>
       `,
     };
