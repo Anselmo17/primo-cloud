@@ -41,24 +41,25 @@ export async function sendContactEmail(formData: FormData) {
       },
     });
     
+
     // Email content
     const mailOptions = {
       from: email,
-      to: process.env.EMAIL_USER,
-      subject: `Portfolio Contact: ${subject}`,
+      to: process.env?.EMAILS,
+      subject: subject,
       text: `
-        Name: ${name}
-        Email: ${email}
+        Nome: ${name}
+        E-mail: ${email}
         
-        Message:
+        Mensagem:
         ${message}
       `,
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
+        <h2>Dados do Contato:</h2>
+        <p><strong>Nome:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <h3>Message:</h3>
+        <p><strong>Assunto:</strong> ${subject}</p>
+        <h3>Mensagem:</h3>
         <p>${message}</p>
       `,
     };
