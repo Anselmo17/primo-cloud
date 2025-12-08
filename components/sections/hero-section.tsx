@@ -14,6 +14,9 @@ import { Button } from "@/components/ui/button";
 import { AnimatedText, ClientMotion } from "@/components/client-animations";
 
 export function HeroSection() {
+
+  const SIZE_IMAGE = 220;
+
   return (
     <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 px-4 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
@@ -24,11 +27,6 @@ export function HeroSection() {
                 text="Primo Cloud"
                 className="text-4xl md:text-5xl font-bold tracking-tight"
               />
-              <AnimatedText
-                text="Engenheiro de Soluções Cloud"
-                className="text-2xl md:text-3xl font-semibold mt-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
-                once={true}
-              />
             </div>
             <ClientMotion
               className="text-lg text-gray-600 dark:text-gray-300"
@@ -36,9 +34,11 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Especializado em aprendizado de máquina, aprendizado profundo e
-              ciência de dados, com experiência em implantação de soluções de IA
-              e integração de APIs de LLM.
+              A Primo Cloud é uma assessoria especializada em soluções Microsoft
+              e ambientes de nuvem corporativa. Nosso foco é entregar migrações
+              seguras, integradas e de alta performance, garantindo que sua
+              empresa aproveite ao máximo o potencial do Microsoft 365, Azure e
+              Defender for Cloud.
             </ClientMotion>
             <ClientMotion
               className="flex flex-wrap gap-4"
@@ -140,6 +140,50 @@ export function HeroSection() {
             <ArrowDown className="w-6 h-6" />
           </Link>
         </ClientMotion>
+
+
+        <div className="mt-16 pt-12 flex">
+        <ClientMotion
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="space-y-6"
+        >
+          <h3 className="text-center uppercase tracking-wide text-lg text-gray-700 dark:text-gray-300">
+            Tecnologias e Plataformas
+          </h3>
+            <div className="flex flex-wrap justify-center items-center gap-8">
+            <Image
+              src="/images/oracle.png"
+              alt="ORACLE"
+              width={SIZE_IMAGE}
+              height={SIZE_IMAGE}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/goggle.png"
+              alt="GOGGLE"
+              width={SIZE_IMAGE}
+              height={SIZE_IMAGE}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/aws.png"
+              alt="AWS"
+              width={SIZE_IMAGE}
+              height={SIZE_IMAGE}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/images/azure.png"
+              alt="AZURE"
+              width={SIZE_IMAGE}
+              height={SIZE_IMAGE}
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            />
+            </div>
+        </ClientMotion>
+      </div>
       </div>
     </section>
   );
