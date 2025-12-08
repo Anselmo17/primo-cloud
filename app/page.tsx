@@ -1,11 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  ExternalLink,
-} from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -31,9 +26,10 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
-import { EducationCertificationSection } from "@/components/sections/education-certification-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { Footer } from "@/components/footer";
+import { SpecialtiesSection } from "@/components/sections/specialties-section";
+import { MethodologySection } from "@/components/sections/methodology-section";
 
 export default function Home() {
   return (
@@ -49,19 +45,21 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
       {/* Seção Sobre*/}
-       <AboutSection />
+      <AboutSection />
+      {/* Seção especialidaes*/}
+      <SpecialtiesSection />
 
       {/* Seção de Experiência */}
       <ExperienceSection />
 
       {/* Seção de Projetos */}
-      <ProjectsSection/>
+      <ProjectsSection />
 
       {/* Seção de Habilidades */}
       <SkillsSection />
 
       {/* Educação e Certificações */}
-      <EducationCertificationSection />
+      <MethodologySection />
 
       {/* Seção de Contato */}
       <ContactSection />

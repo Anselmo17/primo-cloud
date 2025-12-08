@@ -17,7 +17,7 @@ export function ProjectsSection() {
       <div className="container mx-auto max-w-6xl relative z-10">
         <AnimatedSection>
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Projetos em Destaque
+            Soluções
           </h2>
         </AnimatedSection>
 
